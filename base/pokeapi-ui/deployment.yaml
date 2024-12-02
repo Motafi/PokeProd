@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pokeapi-ui
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: pokeapi-ui
+  template:
+    metadata:
+      labels:
+        app: pokeapi-ui
+    spec:
+      containers:
+      - image: docker.io/library/pokeapi:0.1
+        name: pokeapi-ui
+        ports:
+        - containerPort: 3000
