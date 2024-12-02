@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pokeapi-ui-2
+  name: pokeapi-ui
 spec:
   replicas: 1
   revisionHistoryLimit: 3
