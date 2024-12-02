@@ -6,4 +6,3 @@ namespace: pokeapi-kustomize
 
 resources:
 - pokeapi-ui/
-- deployment.yml
