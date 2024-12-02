@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: pokeapi-cm
 data:
-  API_URL: "localhost://3000"
+  API_URL: "https://pokeapi.co/api"
