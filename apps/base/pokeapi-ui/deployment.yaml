@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pokeapi-ui
+  name: pokeapi-ui-v1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pokeapi-ui
+      app: pokeapi-ui-v1
   template:
     metadata:
       labels:
-        app: pokeapi-ui
+        app: pokeapi-ui-v1
     spec:
       containers:
       - image: docker.io/library/pokeapi:0.1
