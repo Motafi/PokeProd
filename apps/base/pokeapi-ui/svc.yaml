@@ -8,15 +8,3 @@ spec:
     targetPort: 3000
   selector:
     app: pokeapi-ui
-
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: pokeapi-ui-2
-spec:
-  ports:
-  - port: 3000
-    targetPort: 3000
-  selector:
-    app: pokeapi-ui-2
