@@ -6,4 +6,4 @@ namespace: pokeapi-kustomize
 
 resources:
 - pokeapi-ui/
-- ../overlays/
+- deployment.yaml
