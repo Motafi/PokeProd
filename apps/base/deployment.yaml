@@ -7,14 +7,14 @@ spec:
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: pokeapi-ui-2
+      app: pokeapi-ui
   template:
     metadata:
       labels:
-        app: pokeapi-ui-2
+        app: pokeapi-ui
     spec:
       containers:
       - image: docker.io/library/pokeapi:0.1
-        name: pokeapi-ui-2
+        name: pokeapi-ui
         ports:
         - containerPort: 3000
