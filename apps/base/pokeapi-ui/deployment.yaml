@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pokeapi-ui-v1
+  name: pokeapi-ui
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: pokeapi-ui-v1
+      app: pokeapi-ui
   template:
     metadata:
       labels:
-        app: pokeapi-ui-v1
+        app: pokeapi-ui
     spec:
       containers:
       - image: docker.io/library/pokeapi:0.1
@@ -19,24 +19,24 @@ spec:
         - containerPort: 3000
 
 
----
+#---
 
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: pokeapi-ui-v2
-spec:
- replicas: 1
-  selector:
-    matchLabels:
-      app: pokeapi-ui-v2
-  template:
-    metadata:
-      labels:
-        app: pokeapi-ui-v2
-    spec:
-      containers:
-      - image: docker.io/library/pokeapi:0.1
-        name: pokeapi-ui
-        ports:
-        - containerPort: 3000
+#apiVersion: apps/v1
+#kind: Deployment
+#metadata:
+#  name: pokeapi-ui-v2
+#spec:
+ # replicas: 1
+  #selector:
+   # matchLabels:
+    #  app: pokeapi-ui-v2
+  #template:
+   # metadata:
+    #  labels:
+     #   app: pokeapi-ui-v2
+    #spec:
+     # containers:
+      #- image: docker.io/library/pokeapi:0.1
+       # name: pokeapi-ui
+        #ports:
+        #- containerPort: 3000
