@@ -6,3 +6,23 @@ namespace: pokedex
 resources:
 - kanto/
 - johto/
+
+
+generatorOptions:
+  disableNameSuffixHash: true ##Obligé pour qu'elle soit iso avec le nom de la config map attendu sinon ça rajoute du hachage
+                              ##(Potentiellement faire en sorte qu'on attende une configmap avec hachage ?)
+namePrefix: pokedex-
+nameSuffix: -cm
+
+configMapGenerator:
+- name: kanto
+  literals:
+    - POKEDEX_NAME="Kanto"
+    - POKEDEX_START_NUMBER="1"
+    - POKEDEX_END_NUMBER="151"
+
+- name: johto
+  files:
+    - ./johto/application.properties
+  envs:
+    - ./johto/.env

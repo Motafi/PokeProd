@@ -9,12 +9,3 @@ images:
 - name: ghcr.io/froissant/pokedex:main
   newName: ghcr.io/froissant/pokedex
   newTag: sha-7b0b2ef
-
-generatorOptions:
-  disableNameSuffixHash: true ##Obligé pour qu'elle soit iso avec le nom de la config map attendu sinon ça rajoute du hachage
-                              ##(Potentiellement faire en sorte qu'on attende une configmap avec hachage ?)
-
-configMapGenerator:
-- name: pokedex-johto-cm
-  files:
-    - .env
